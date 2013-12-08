@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Castano Blog</title>
+      <link type="text/css" rel="stylesheet" href="stylesheets/main.css"/>
+  </head>
+    
+  <body>
+   <h1>Castano Blog</h1>
+
+
+    <hr>
+
+   {% for content in contents %}
+     <div class="post">
+       <div class="post-title">{{content.subject}}</div>
+       <div class="timestamp">{{content.created}}</div>
+         <br>
+         <hr>
+       <pre class="post-body">{{content.post}}</pre>
+     </div>
+     <hr>
+    {% endfor %} -->
+
+  </body>
+</html>
