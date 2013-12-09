@@ -5,23 +5,22 @@
     <title>Castano Blog</title>
       <link type="text/css" rel="stylesheet" href="stylesheets/main.css"/>
   </head>
-    
-  <body>
-   <h1>Castano Blog</h1>
 
+  <body>
+   <a href="/"><h1>Castano Blog</h1></a>
 
     <hr>
 
    {% for content in contents %}
-     <div class="post">
-       <div class="post-title">{{content.subject}}</div>
+     <div class="content">
+       <div class="content-subject">{{content.subject}}</div>
        <div class="timestamp">{{content.created}}</div>
          <br>
          <hr>
-       <pre class="post-body">{{content.post}}</pre>
+       <pre class="content-body">{{content.content}}</pre>
      </div>
      <hr>
-    {% endfor %} -->
+    {% endfor %}
 
   </body>
 </html>

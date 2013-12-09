@@ -40,27 +40,39 @@ hr {
     margin: 20px auto;
 }
 
-.art + .art {
+.content {
     margin-top: 20px;
 }
 
-.art-title {
+.content-subject {
     font-weight: bold;
     font-size: 20px;
+    float: left;
 }
 
-.art-body {
+.content-body {
     margin: 0;
     font-size: 17px;
 }
 
 h1 {
     font-weight: bold;
-    font-size: 2em;
+    font-size: 3em;
+    text-align:center;
 }
 
 form label div {
     font-size: 1em;
     font-weight: bold;
-    
+
+}
+.timestamp {
+    float: right;
+    font-style:italic;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+
 }

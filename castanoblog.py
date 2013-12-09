@@ -48,7 +48,7 @@ class NewPost(Handler):
         if subject and content:
             a = Content(subject = subject, content = content)
             a.put()
-            self.redirect("/CastanoBlog")
+            self.redirect("/")
         else:
             error = "We need both a subject and content!"
             self.render_newpost(subject, content, error)
