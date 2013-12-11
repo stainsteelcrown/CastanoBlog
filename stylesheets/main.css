@@ -33,11 +33,12 @@ textarea {
     width: 400px;
     height: 200px;
     font-size: 17px;
-    font-family: monospace;
 }
 
 hr {
-    margin: 20px auto;
+    margin: 10px auto;
+    clear: both;
+    size: 3px;
 }
 
 .content {
@@ -46,7 +47,7 @@ hr {
 
 .content-subject {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 2em;
     float: left;
 }
 

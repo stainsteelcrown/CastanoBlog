@@ -47,14 +47,21 @@ class NewPost(Handler):
 
         if subject and content:
             a = Content(subject = subject, content = content)
-            a.put()
-            self.redirect("/")
+            a_key = a.put()
+
+            self.redirect("/%d" % a_key.id())
         else:
             error = "We need both a subject and content!"
             self.render_newpost(subject, content, error)
+
+class SinglePost(Handler):
+    def get(self, content_id):
+        s = Content.get_by_id(int(content_id))
+        self.render("blog.html", contents=[s])
 
 
 app = webapp2.WSGIApplication([
     ('/', CastanoBlog),
     ('/newpost', NewPost),
+    ('/(\d+)', SinglePost)
 ])

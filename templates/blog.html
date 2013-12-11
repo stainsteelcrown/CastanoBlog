@@ -8,18 +8,20 @@
 
   <body>
    <a href="/"><h1>Castano Blog</h1></a>
+   <a href="/newpost"><h2>New Post</h2></a>
 
-    <hr>
+
+    <br>
 
    {% for content in contents %}
      <div class="content">
        <div class="content-subject">{{content.subject}}</div>
-       <div class="timestamp">{{content.created}}</div>
-         <br>
+       <div class="timestamp">{{content.created.month}} / {{content.created.day}} / {{content.created.year}}</div>
+
          <hr>
        <pre class="content-body">{{content.content}}</pre>
      </div>
-     <hr>
+
     {% endfor %}
 
   </body>
